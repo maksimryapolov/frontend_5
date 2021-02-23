@@ -1,0 +1,93 @@
+.news-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $screen-md-max) {
+        flex-direction: column;
+    }
+    
+    &__item {
+        background-color: $white;
+        margin: auto;
+
+        @media (max-width: $screen-md-max) {
+            width: calc((100% - 11 * 20px) / 1);
+        }
+
+        @media (min-width: $screen-lg) {
+            width: calc((100% - 5 * 20px) / 3);
+        }
+
+        @media (max-width: $screen-sm) {
+            width: calc((100% - 0 * 20px) / 1);
+        }
+
+        & + & {
+            @media (max-width: $screen-md-max) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__image {
+        padding-bottom: 34px;
+
+        img {
+            @include img;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        padding: 0 30px 25px 30px;
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 800;
+        color: $title-news;
+    }
+
+    &__subtitle, 
+    &__desc {
+        font-size: rem(14);
+        line-height: rem(22);
+        font-weight: 500;
+    }
+    
+    &__subtitle {
+        color: $subtitle-news;
+        padding-bottom: 23px;
+    }
+
+    &__desc {
+        color: $gray;
+        padding-bottom: 25px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__actions {
+        display: flex;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+
+        & + & {
+            padding-left: 12px;
+            margin-left: 12px;
+            border-left: 1px solid $subtitle-news;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.adv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @media (max-width: $sceren-sm-max) {
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 0 1 33.333%;
+
+        @media (max-width: $sceren-sm-max) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        @media (min-width: $screen-md) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: $screen-sm) {
+            flex-direction: column;
+        }
+
+        & + & {
+            @media (max-width: $sceren-sm-max) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__icon {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $white;
+
+        svg {
+            width: 39px;
+            height: 39px;
+        }
+
+        @media (max-width: $sceren-sm-max) {
+            transform: none;
+            position: static;
+            border: 1px solid $nav-active;
+        }
+
+        @media (min-width: $screen-md) {
+            transform: translateY(-50%);
+            position: absolute;
+        }
+
+        @media (max-width: $screen-sm) {
+            width: $size / 1.5;
+            height: $size / 1.5;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: $screen-sm) {
+            width: $size;
+            height: $size;
+        }
+    }
+
+    &__text {
+        @media (max-width: $sceren-sm-max) {
+            padding-top: 0;
+        }
+
+        @media (min-width: $screen-md) {
+            padding-top: calc(#{$size} / 2);
+        }
+    }
+
+    &__title {
+        font-size: rem(30);
+        font-weight: 900;
+        padding-bottom: 13px;
+    }
+
+    &__desc {
+        font-weight: 500;
+    }
+}

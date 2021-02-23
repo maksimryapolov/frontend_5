@@ -1,0 +1,41 @@
+.popular {
+    background-color: $popular-block;
+
+    &__body {
+        @include custom-container;
+        padding-top: 150px;
+        padding-bottom: 55px;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        img {
+            @include img;
+        }
+    }
+
+    &__image {
+        img {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $screen-md-max) {
+            width: calc((100% - 2 * 20px) / 3);
+
+            &:nth-child(n+4) {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: $screen-sm) {
+            width: calc((100% - 2 * 20px) / 2);
+
+            &:nth-child(n+3) {
+                margin-top: 40px;
+            }
+        }
+    }
+}

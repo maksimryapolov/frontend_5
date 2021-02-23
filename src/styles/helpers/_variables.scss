@@ -1,0 +1,65 @@
+/* Colors variables */
+$white: #fff;
+$black: #000;
+$light-black: #222222;
+$pink: #f9236f;
+$pink2: #f92346;
+$gray: #494949;
+$gray2: #6b6b6b;
+$nav-active: #f92357;
+$nav-default: #cacaca;
+$star: #ffc808;
+$title-news: #515151;
+$subtitle-news: #a8a8a8;
+$price-pink: #f92349;
+$border-brands: #c2c2c2;
+$popular-block: #eeeeee;
+/*
+
+#3f3f3f
+
+
+#5b5b5b
+#5c5c5c
+#6b6b6b
+#939393
+#a1a1a1
+
+#b9b9b9
+#bae9ff
+
+
+#d7eff9
+
+#f6f6f6
+#f8f8f8
+
+
+#f9234a
+
+
+#ff377e
+
+*/
+/* ! Colors variables */
+
+/* Base font size */
+$base-font-size: 16px !default;
+/* ! Base font size */
+
+$container: 1200px;
+
+$base-font: 'Montserrat';
+
+/* breakpoints */
+$screen-sm: 576px;
+$screen-md: 767px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$sceren-sm-max: 767px;
+$screen-md-max: 992px;
+$screen-lg-max: 1199px;
+/* ! breakpoints */
+
+$transition: .2s;

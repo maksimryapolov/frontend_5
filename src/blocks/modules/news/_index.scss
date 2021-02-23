@@ -1,0 +1,26 @@
+.news {
+    background-image: url('../img/news/news_bg_1.jpg');
+    @include cover;
+    padding-top: 131px;
+    padding-bottom: 185px;
+
+    &__body {
+        @include custom-container;
+    }
+
+    &__title-block {
+        text-align: center;
+        line-height: 1.2;
+        padding-bottom: 48px;
+    }
+
+    &__title {
+        font-size: rem(25.9);
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        font-weight: 500;
+    }
+}

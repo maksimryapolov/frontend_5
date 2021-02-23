@@ -1,0 +1,60 @@
+.catalog-links {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $sceren-sm-max) {
+        flex-direction: column;
+    }
+
+    &__item {
+        padding: 45px;
+        background-image: url('../img/featured/catalog_1.jpg');
+        @include cover;
+
+        &_img-2 {
+            background-image: url('../img/featured/catalog_2.jpg');
+        }
+
+        @media (max-width: $sceren-sm-max) {
+            width: calc((100% - 0 * 20px) / 1);
+        }
+
+        @media (min-width: $screen-md) {
+            width: calc((100% - 2 * 20px) / 2);
+        }
+
+        & + & {
+            @media (max-width: $sceren-sm-max) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: rem(48.4);
+        line-height: rem(39);
+        font-weight: 800;
+        color: $light-black;
+
+        div {
+            color: $pink;
+        }
+    }
+
+    &__desc {
+        line-height: rem(22);
+        font-weight: 500;
+        color: $gray;
+        margin: 32px 0 18px 0;
+        width: 50%;
+
+        @media (max-width: $screen-sm) {
+            width: 100%;
+        }
+
+        @media (min-width: $screen-sm) {
+            width: 50%;
+        }
+    }
+    
+}

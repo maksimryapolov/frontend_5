@@ -1,0 +1,212 @@
+.footer {
+    background-image: url('../img/footer/footer_bg.jpg');
+    @include cover;
+    color: $white;
+    padding-top: 80px;
+    padding-bottom: 96px;
+    font-weight: 500;
+
+    &__body {
+        @include custom-container;
+    }
+
+    &__top {
+        margin-bottom: 64px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $screen-md-max) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        @media (max-width: $screen-md-max) and (min-width: $screen-sm) {
+            flex-basis: 50%;
+        }
+
+        @media (max-width: $screen-sm) {
+            flex-basis: 100%;
+        }
+
+        @media (min-width: $screen-lg) {
+            flex-basis: calc((100% - 4 * 20px) / 4);    
+        }
+
+        &_md {
+            @media (min-width: $screen-lg) {
+                flex-basis: calc((100% - 0 * 20px) / 3);
+            }
+            
+        }
+
+        &:nth-child(n+3) {
+            @media (max-width: $screen-md-max) and (min-width: $screen-sm) {
+                margin-top: 40px;
+            }
+        }
+
+        & + & {
+            @media (max-width: $screen-md-max) and (min-width: $screen-sm) {
+                margin-top: 0;
+            }
+
+            @media (max-width: $screen-sm) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__text {
+        width: 70%;
+        margin-bottom: 43px;
+        line-height: 1.4;
+    }
+
+    &__column-title {
+        font-size: rem(20);
+        line-height: 1.2;
+        font-weight: 900;
+        margin-bottom: 32px;
+
+        &_margin-sm {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__payment-item {
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__social-items {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 55px;
+    }
+
+    &__social-item {
+        flex-basis: 50%;
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        line-height: 1.6;
+
+        &:not(:nth-child(-n+2)) {
+            margin-top: 16px;
+        }
+        
+        &_goole {
+            background-image: url('../img/svg/footer/google-plus.svg');
+        }
+
+        &_pint {
+            background-image: url('../img/svg/footer/pinterest.svg');
+        }
+
+        &_vimeo {
+            background-image: url('../img/svg/footer/vimeo.svg');
+        }
+
+        &_facebook {
+            background-image: url('../img/svg/footer/facebook.svg');
+        }
+
+        &_twitter {
+            background-image: url('../img/svg/footer/twitter.svg');
+        }
+
+        &_rss {
+            background-image: url('../img/svg/footer/rss.svg');
+        }
+    }
+
+    &__payment-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__payment-item {
+        img {
+            @include img;
+        }
+    }
+
+    &__bottom {}
+
+    &__nav-items {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    &__nav-item {
+
+        font-size: rem(14);
+
+        &+& {
+            padding-left: 32px;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: rem(14)x;
+        font-weight: 700;
+    }
+}
+
+.contact {
+    &__item {
+        padding-left: 25px;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+
+        &_street {
+            background-image: url("../img/svg/footer/geo.svg");
+        }
+
+        &_number {
+            background-image: url("../img/svg/footer/phone.svg");
+        }
+
+        &_email {
+            background-image: url("../img/svg/footer/email.svg");
+        }
+
+        color: $white;
+        & + & {
+            margin-top: 15px;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+}
+
+.footer-menu {
+
+    &__items {}
+
+    &__item {
+        font-weight: 500;
+
+        &+& {
+            margin-top: 25px;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+}

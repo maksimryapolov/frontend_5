@@ -1,0 +1,36 @@
+.info-popup {
+    background-image: url('../img/info/info_1.jpg');
+    @include cover;
+    color: $white;
+
+    &__body {
+        @include custom-container;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        padding-bottom: 27px;
+    }
+
+    &__text {
+        font-size: rem(20);
+        font-weight: 700;
+
+        @media (max-width: $screen-sm) {
+            padding-right: 10px;
+        }
+    }
+
+    &__btn-close {
+        min-width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-color: $white;
+        color: $black;
+        font-weight: bold;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,69 @@
+/* images */
+@mixin img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+@mixin cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/* ! images */
+
+// reset buttons
+@mixin resetbutton($padding: 0) {
+    border: none;
+    margin: 0;
+    padding: $padding;
+    width: auto;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+    }
+}
+
+@mixin custom-container {
+    max-width: $container;
+    margin: 0 auto;
+    @include container-full();
+}
+
+@mixin body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+    font-weight: 400;
+}
+
+@mixin resetLink {
+    color: $black;
+    text-decoration: none;
+}
+
+@mixin vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%btn-default {
+    padding: 12px 22px;
+    color: $white;
+    background-image: linear-gradient(90.0deg, $pink 0%, $pink2 100%);
+    display: inline-block;
+    font-size: rem(20.3);
+    line-height: 1.2;
+    font-weight: 900;
+}
